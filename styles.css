@@ -1,0 +1,121 @@
+*{
+    /* background: rgb(0 100 0/0.1) !important; */
+    margin:0;
+    padding:0;
+    background-color: #8ea0be;
+}
+body,html{
+    height: 100%;
+    overflow: hidden;
+}
+
+h1{
+    text-align: center;
+    margin: auto;
+    margin-top: 1em;
+    width: fit-content;
+    padding:7px;
+    font-family: Courier New, sans-serif;
+    font-size: 2.6em;
+    color:#273244;
+    /* text-decoration: underline; */
+    border: 1px solid;
+    border-radius: 7px;
+    box-shadow: 3px 3px 7px black;
+    text-shadow: 1px 1px 2px black;
+}
+
+#calcgrid{
+    height: fit-content;
+    width: fit-content;
+    margin:auto;
+    margin-top: 3em;
+    background-color: #273244;
+    border: 10px solid #273244;
+    border-radius:7px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-areas: 
+    "display display display display"
+    "a a b c"
+    "d e f g"
+    "h i j k"
+    "l m n o"
+    "p p q r";
+    grid-template-columns: 70px 70px 70px 70px;
+    grid-template-rows: 75px 60px 60px 60px 60px 60px;
+    gap:5px;
+    box-shadow: 3px 3px 4px ;
+}
+
+#display{grid-area: display;}
+#AC{grid-area: a;}
+#percent{grid-area: b;font-size: 1em;}
+#div{grid-area: c;}
+#n7{grid-area: d;}
+#n8{grid-area: e;}
+#n9{grid-area: f;}
+#x{grid-area: g;}
+#n4{grid-area: h;}
+#n5{grid-area: i;}
+#n6{grid-area: j;}
+#sub{grid-area: k;}
+#n1{grid-area: l;}
+#n2{grid-area: m;}
+#n3{grid-area: n;}
+#add{grid-area: o;}
+#n0{grid-area: p;}
+#dot{grid-area: q;}
+#eq{grid-area: r;}
+
+button{
+    background-color: #273244;
+    color:#cccccc;
+    cursor: pointer;
+    border:1px solid black;
+    box-shadow: 2px 2px 4px black;
+    border:none;
+    border-radius: 7px;
+    font-size: large;
+}
+
+#AC{
+    background-color:#b30000;
+}
+
+#eq{
+    background-color: #458fd9;
+}
+
+.symbols{
+    color:#80b0ff;
+    font-size:1.5em;
+}
+
+#display{
+    background-color:#273244;
+    border:none; 
+    box-shadow:inset 2px 2px 5px black,inset -2px -2px 5px black;
+    border-radius: 7px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding: 12px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+#input,#result{
+    background-color: #273244;
+    color:#cccccc;
+    width: fit-content;
+}
+
+#input{
+    font-size: 14px;
+}
+#result{
+    font-size: 25px;
+}
