@@ -10,21 +10,15 @@ Array.from(number).forEach(num =>{
         if(parseFloat(input.innerText)>99999999999999999999999999999999999999999|| 
             parseFloat(result.innerText)>99999999999999999999999999999999999999999)
             clr();
-        if(num.innerText==="." && result.innerText.includes('.')) return;
-        if(first === 0 && input.innerText !== ""){
-            input.innerHTML += num.innerText;
-            result.innerHTML += num.innerText;
-        }
-        else{
-            result.innerHTML += num.innerText;
-        }
-
+        if(num.innerText==="." && result.innerText.includes('.')) 
+          return;
+        result.innerHTML += num.innerText;
     })
 });
 
 Array.from(symbol).forEach(sym =>{
     sym.addEventListener("click",op = ()=>{
-        if(first === 0){
+        if(first === 0 && !input.innerText){
             first = parseFloat(result.innerText);
             input.innerText = result.innerText + sym.innerText;
             result.innerText = "";
